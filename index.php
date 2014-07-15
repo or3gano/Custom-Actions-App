@@ -1,5 +1,5 @@
 <?php
-
+//testing
 //connect to database, functions, and session files
 include 'db_connect.php'; include 'functions.php'; include 'session_details.php';
 
