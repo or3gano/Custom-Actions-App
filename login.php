@@ -1,13 +1,15 @@
 <?php session_start(); if(session_is_registered(user) || session_is_registered(admin)){ header("Location: index.php");} ?>
+<!DOCTYPE html>
 <html>
 
 <head>
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="login-body">
 
 <div class="col-lg-6 col-lg-offset-3">
     <div class="panel panel-default">
@@ -27,11 +29,7 @@
                             </div>
                         </div>
                         <div class="col-lg-offset-4" style="margin-bottom: 0px;">
-                            <label class="checkbox" style="float:left;">
-                                <input type="checkbox">
-                                Remember me
-                            </label>
-							<a style="margin-left:370px; text-decoration:none;" class="btn btn-link" href="register.php" ><i class="fa fa-key"></i>Register</a>
+							<a style="margin-left:484px; text-decoration:none;" class="btn btn-link" href="register.php" ><i class="fa fa-key"></i>Register</a>
                         </div>
 						<div class="well well-sm text-right" style="margin-top: 15px; margin-bottom: 0px;">
 							<div>

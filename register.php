@@ -3,10 +3,11 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="login-body">
 
 <div class="col-lg-6 col-lg-offset-3">
     <div class="panel panel-default">

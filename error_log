@@ -163,3 +163,5 @@
 [14-Jul-2014 16:18:30] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home2/ecoabsor/public_html/ca_app/run_login.php on line 15
 [14-Jul-2014 16:19:01] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home2/ecoabsor/public_html/ca_app/run_login.php on line 15
 [14-Jul-2014 16:19:23] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home2/ecoabsor/public_html/ca_app/run_login.php on line 15
+[15-Jul-2014 11:29:02] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home2/ecoabsor/public_html/ca_app/run_login.php on line 15
+[15-Jul-2014 11:31:09] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home2/ecoabsor/public_html/ca_app/run_login.php on line 15

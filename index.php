@@ -1,7 +1,7 @@
 <?php
 
-//connect to database, functions, and session files
-include 'db_connect.php'; include 'functions.php'; include 'session_details.php';
+include "header.php";
+
 
 //if user isn't logged int then redirect them to login page
 if( empty($_SESSION['user']) ){ //if login in session is not set
@@ -13,5 +13,7 @@ include 'import.php' ;
 
 
 echo "<a href='logout.php'>logout</a>";
+
+include "footer.php";
 
 ?>

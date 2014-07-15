@@ -1,12 +1,14 @@
+<!DOCTYPE html>
 <html>
 
 <head>
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="login-body">
 
 <div class="col-lg-6 col-lg-offset-3">
     <div class="panel panel-default">
@@ -28,10 +30,6 @@
                             </div>
                         </div>
                         <div class="col-lg-offset-4" style="margin-bottom: 0px;">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                Remember me
-                            </label>
                         </div>
 						<div class="well well-sm text-right" style="margin-top: 15px; margin-bottom: 0px;">
 							<div>
