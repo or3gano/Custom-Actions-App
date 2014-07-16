@@ -3,41 +3,77 @@
 //connect to database, functions, and session files
 include 'db_connect.php'; include 'functions.php'; include 'session_details.php';
 
+//if user isn't logged int then redirect them to login page
+if( empty($_SESSION['user']) ){ //if login in session is not set
+    header("Location: login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="styles.css" />
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="jquery-1.11.1.min.js"></script>
-<script>
-$(function(){
+	<!-- Custom Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<!-- Bootstrap -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-    var url = window.location.pathname, 
-        urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
-        // now grab every link from the navigation
-        $('.nav a').each(function(){
-            // and test its normalized href against the url pathname regexp
-            if(urlRegExp.test(this.href.replace(/\/$/,''))){
-                $(this).addClass('highlight');
-            }
-        });
+	<!-- Optional theme -->
+	<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
 
-});
-</script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="jquery-1.11.1.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="lib/js/bootstrap.min.js"></script>
+	
+	<script>
+		$(document).ready(function () {
+			var url = window.location;
+		// Will only work if string in href matches with location
+			$('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+		// Will also work for relative and absolute hrefs
+			$('ul.nav a').filter(function () {
+				return this.href == url;
+			}).parent().addClass('active').parent().parent().addClass('active');
+		});
+	</script>
 
 </head>
 
 <body>
 
-<div id="header">
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="full-width-container">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">
 					<img style="max-height:18px;" src="https://s3staticfiles.s3.amazonaws.com/logos/1/318f410e-7bcf-4feb-9632-e27b58d17d1a.png">
 				</a>
 			</div>
@@ -45,24 +81,32 @@ $(function(){
 				<ul class="nav navbar-nav">
 					<li>
 						<a href="index.php">
+							<i class="fa fa-dashboard"></i>
+							My Dashboard
+							<span class="badge">0</span>
+						</a>
+					</li>
+					<li>
+						<a href="ca-queue.php">
 							<i class="fa fa-tasks"></i>
 							Custom Actions Queue
 						</a>
 					</li>
 				</ul>
-				<div class="navbar-form navbar-left" style="padding:0;margin: 5px 30px;">
-					<div class="form-group" style="padding:0;">
-						<input id="header-search" type="text" class="form-control" style="background-color:#fff;" placeholder="Search (Ctrl+Shift+F)">
+				<!-- SEARCH FORM IN HEADER 
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search (Ctrl+Shift+F)">
 					</div>
-				</div>
+				</form>-->
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a class="dropdown-toggle">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="fa fa-user" style="margin-right: 10px;"></i>
 							<?php echo $_SESSION['user']; ?>
-							<b class="caret" style="margin-left: 5px;"></b>
+							<span class="caret" style="margin-left: 5px;"></span>
 						</a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu" role="menu">
 							<li>
 								<a href="account.php">
 									<i class="fa fa-key"></i>
@@ -82,4 +126,4 @@ $(function(){
 			</div>
 		</div>
 	</div>
-</div>
+	

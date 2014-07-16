@@ -3,7 +3,7 @@
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="login-styles.css" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-12">
 					<div class="text-center box-heading">This user requires a password</div>
-                    <form action="run_password.php" class="form-horizontal" style="margin-bottom: 0px;" id="login" onsubmit="return validateForm()" method="post">
+                    <form action="run_password.php" class="form-horizontal" style="margin-bottom: 0px;" id="login" method="post">
                         <div class="form-group">
                             <label class="col-lg-4 control-label" for="password">Password</label>
                             <div class="col-lg-8">
@@ -47,16 +47,6 @@
         </div>
     </div>
 </div>
-
-<script>
-//validates the form
-function validateForm() {
-    var x = document.forms["login"]["password"].value;
-    if (x.length < 1 ) {
-        alert("Please enter a password");
-        return false;
-    }
-</script>
 
 </body>
 </html>
