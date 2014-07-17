@@ -20,20 +20,16 @@ if( empty($_SESSION['user']) ){ //if login in session is not set
 
 	<!-- Custom Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="styles.css" />
-	
 	<!-- Bootstrap -->
-    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bs/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	
-	<!-- Latest compiled and minified CSS -->
+		<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
 	<!-- Optional theme -->
 	<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -41,24 +37,15 @@ if( empty($_SESSION['user']) ){ //if login in session is not set
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<script src="jquery-1.11.1.min.js"></script>
+	<!-- Link to jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="lib/js/bootstrap.min.js"></script>
-	
-	<script>
-		$(document).ready(function () {
-			var url = window.location;
-		// Will only work if string in href matches with location
-			$('ul.nav a[href="' + url + '"]').parent().addClass('active');
+    <script src="lib/bs/js/bootstrap.min.js"></script>
+	<!-- Link to custom JavaScript -->
+	<script src="lib/script.js"></script>
 
-		// Will also work for relative and absolute hrefs
-			$('ul.nav a').filter(function () {
-				return this.href == url;
-			}).parent().addClass('active').parent().parent().addClass('active');
-		});
-	</script>
 
 </head>
 
@@ -90,6 +77,12 @@ if( empty($_SESSION['user']) ){ //if login in session is not set
 						<a href="ca-queue.php">
 							<i class="fa fa-tasks"></i>
 							Custom Actions Queue
+						</a>
+					</li>
+					<li>
+						<a href="admin-panel.php">
+							<i class="fa fa-briefcase"></i>
+							Administrator
 						</a>
 					</li>
 				</ul>

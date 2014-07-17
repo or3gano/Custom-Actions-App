@@ -5,7 +5,7 @@ This is the custom stylesheet to make custom edits to the Bootstrap theme
 ************************************************************************************************************************************************************/
 
 
-/******************************General Site Styles******************************/
+/****************************** General Site Styles ******************************/
 
 
 body, p, h1, h2, h3, h4, h5, h6, input, td, span, div, button {
@@ -36,8 +36,24 @@ margin-right: auto;
 margin-bottom: 20px;
 }
 
+.label {
+padding: 0.3em .6em .3em !important;
+}
 
-/******************************Navigation Styles******************************/
+@media (min-width: 1721px) {
+	.btn-right-heading {
+		margin-left: 85%;
+	}
+}
+
+@media (min-width: 414px) {
+	.btn-right-heading {
+		margin-left: 100px;
+	}
+}
+
+
+/****************************** Navigation Styles ******************************/
 
 
 .navbar-nav>li>.dropdown-menu {
@@ -56,3 +72,10 @@ color: #428bca;
 background-color: #fff;
 }
 
+
+/****************************** Admin Panel ******************************/
+
+
+#cat-table, #users-table {
+display: none;
+}
