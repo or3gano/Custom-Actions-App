@@ -43,6 +43,8 @@ if( empty($_SESSION['user']) ){ //if login in session is not set
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="lib/bs/js/bootstrap.min.js"></script>
+	<!-- Lightbox js -->
+	<script src="lib/lightbox/jquery.lightbox_me.js"></script>
 	<!-- Link to custom JavaScript -->
 	<script src="lib/script.js"></script>
 
