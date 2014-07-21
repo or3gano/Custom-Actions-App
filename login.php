@@ -1,4 +1,5 @@
-<?php session_start(); if(session_is_registered(user) || session_is_registered(admin)){ header("Location: index.php");} ?>
+<?php session_start(); if(isset($_SESSION['user']) || isset($_SESSION['admin'])) { header("location: index.php"); } ?>
+
 <!DOCTYPE html>
 <html>
 

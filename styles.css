@@ -89,11 +89,13 @@ min-width: 30%;
 @media (min-width: 768px) {
 	.col-sm-2 {
 	width: 25.666667% !important;
+	}
 }
 
 @media (min-width: 768px) {
 	.col-sm-10 {
 	width: 72.333333% !important;
+	}
 }
 
 .cancel-link {
@@ -108,4 +110,8 @@ margin-left: 72%;
 
 #cat-table, #users-table {
 display: none;
+}
+
+td>span {
+padding-right: 100px;
 }

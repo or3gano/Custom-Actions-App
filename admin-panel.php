@@ -11,7 +11,7 @@
 	<div class="panel panel-primary">
 		<div class="panel-body">
 			<ul class="nav nav-pills">
-				<li  id="admin-subnav1">
+				<li  id="admin-subnav1" class="active">
 					<a href="javascript:;">
 						<i class="fa fa-users"></i>
 						Categories

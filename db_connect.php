@@ -1,7 +1,7 @@
 <?php  
 
-$db_name = "ecoabsor_ca_app";
-$db_user = "ecoabsor_caapp";
+$db_name = "obladine_ca_app";
+$db_user = "obladine_caapp";
 $pass = "IPN+k?pGO1U6";
 
 
