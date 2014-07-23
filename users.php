@@ -67,12 +67,10 @@
 								else { echo "<td>User</td>"; };
 							?>
 							<td>
-								<form>
-									<button type="submit" role="button" class="btn btn-primary" id="edit_user_btn" method="post" name="edit_user_btn" >
-										<i class="fa fa-edit"></i>
-										Edit Permission Level
-									</button>
-								</form>
+								<a href= "<?php echo "edit_permission.php?user=".$id; ?>" role="button" class="btn btn-primary btn-right-heading" id="add_user_btn">
+									<i class="fa fa-edit"></i>
+									Edit Permission Level
+								</a>
 							</td>
 						</tr>
 					<?php } ?>
